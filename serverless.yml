@@ -1,0 +1,23 @@
+service: myfirstlambda
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+plugins:
+ - serverless-offline
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /s
+          method: get
+  helloo:
+    handler: handler.helloo
+    events:
+      - http: 
+          path: /ss
+          method: get
